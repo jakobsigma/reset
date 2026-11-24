@@ -1,0 +1,448 @@
+{
+  "schema_version": 1,
+  "app_name": "Jakob Reset",
+  "description": "A beginner-friendly strength and self-care plan. Adjust it to your energy, experience and available equipment.",
+  "schedule": [
+    {
+      "day": "Monday",
+      "title": "Upper Body A",
+      "focus": "Push, pull and core",
+      "workout_id": "upper_a"
+    },
+    {
+      "day": "Tuesday",
+      "title": "Recovery",
+      "focus": "Easy walk, mobility or rest",
+      "workout_id": null
+    },
+    {
+      "day": "Wednesday",
+      "title": "Lower Body + Core",
+      "focus": "Leg strength and stability",
+      "workout_id": "lower_core"
+    },
+    {
+      "day": "Thursday",
+      "title": "Recovery",
+      "focus": "Easy movement or rest",
+      "workout_id": null
+    },
+    {
+      "day": "Friday",
+      "title": "Upper Body B",
+      "focus": "Upper body and posture",
+      "workout_id": "upper_b"
+    },
+    {
+      "day": "Saturday",
+      "title": "Optional Full Body",
+      "focus": "Light technique session",
+      "workout_id": "full_body"
+    },
+    {
+      "day": "Sunday",
+      "title": "Rest + Review",
+      "focus": "Rest and plan the next week",
+      "workout_id": null
+    }
+  ],
+  "workouts": [
+    {
+      "id": "upper_a",
+      "title": "Upper Body A",
+      "day": "Monday",
+      "duration": "35–45 min",
+      "description": "A balanced beginner session. Use controlled reps and stop before your form breaks.",
+      "exercises": [
+        "incline_pushup",
+        "machine_chest_press",
+        "seated_cable_row",
+        "lat_pulldown",
+        "dead_bug"
+      ]
+    },
+    {
+      "id": "lower_core",
+      "title": "Lower Body + Core",
+      "day": "Wednesday",
+      "duration": "35–45 min",
+      "description": "Build leg strength with a comfortable range of motion and steady technique.",
+      "exercises": [
+        "bodyweight_squat",
+        "goblet_squat",
+        "leg_curl",
+        "glute_bridge",
+        "plank"
+      ]
+    },
+    {
+      "id": "upper_b",
+      "title": "Upper Body B",
+      "day": "Friday",
+      "duration": "35–45 min",
+      "description": "A second upper-body day with a little extra attention to shoulders and back.",
+      "exercises": [
+        "machine_shoulder_press",
+        "chest_supported_row",
+        "dumbbell_biceps_curl",
+        "cable_triceps_pushdown",
+        "bird_dog"
+      ]
+    },
+    {
+      "id": "full_body",
+      "title": "Optional Full Body",
+      "day": "Saturday",
+      "duration": "25–35 min",
+      "description": "Optional, easy technique practice. Skip it if you feel tired or need more recovery.",
+      "exercises": [
+        "bodyweight_squat",
+        "incline_pushup",
+        "seated_cable_row",
+        "glute_bridge",
+        "dead_bug"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "incline_pushup",
+      "name": "Incline Push-up",
+      "category": "Upper body",
+      "equipment": "Bench or sturdy elevated surface",
+      "sets": 2,
+      "reps": "6–10",
+      "rest_seconds": 75,
+      "how": "Place your hands on a stable bench or counter, a little wider than shoulder-width. Keep your body in a straight line and lower your chest toward the edge. Press back up smoothly.",
+      "form": [
+        "Keep your stomach gently braced and hips in line with shoulders.",
+        "Use a higher surface to make it easier.",
+        "Stop if you feel sharp pain in your wrists or shoulders."
+      ],
+      "muscles": "Chest, shoulders and triceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=incline+push+up+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=incline+push+up+proper+form"
+    },
+    {
+      "id": "machine_chest_press",
+      "name": "Machine Chest Press",
+      "category": "Upper body",
+      "equipment": "Chest press machine",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 90,
+      "how": "Adjust the seat so the handles are around mid-chest. Keep your back against the pad, press forward without locking your elbows, then return slowly.",
+      "form": [
+        "Ask gym staff to help set the seat and machine.",
+        "Keep wrists straight and shoulders relaxed.",
+        "Choose a light weight that you can control."
+      ],
+      "muscles": "Chest, front shoulders and triceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=machine+chest+press+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=seated+chest+press+machine+proper+form"
+    },
+    {
+      "id": "seated_cable_row",
+      "name": "Seated Cable Row",
+      "category": "Upper body",
+      "equipment": "Cable row machine",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 90,
+      "how": "Sit tall with knees slightly bent. Pull the handle toward your lower ribs, keeping elbows close. Pause briefly, then let your arms extend under control without rounding your back.",
+      "form": [
+        "Avoid leaning far backwards to move the weight.",
+        "Lead with your elbows, not your shoulders.",
+        "Keep the movement smooth."
+      ],
+      "muscles": "Mid-back, lats and biceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=seated+cable+row+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=seated+cable+row+proper+form"
+    },
+    {
+      "id": "lat_pulldown",
+      "name": "Lat Pulldown",
+      "category": "Upper body",
+      "equipment": "Lat pulldown machine",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 90,
+      "how": "Set the thigh pad snugly. Use a comfortable wide-ish grip and pull the bar toward your upper chest. Let it rise slowly; do not pull behind your neck.",
+      "form": [
+        "Keep your torso mostly upright.",
+        "Think elbows down toward your sides.",
+        "Use a weight that does not make you swing."
+      ],
+      "muscles": "Lats, upper back and biceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=lat+pulldown+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=lat+pulldown+proper+form"
+    },
+    {
+      "id": "dead_bug",
+      "name": "Dead Bug",
+      "category": "Core",
+      "equipment": "Mat",
+      "sets": 2,
+      "reps": "6–8 each side",
+      "rest_seconds": 45,
+      "how": "Lie on your back with arms pointing up and knees bent above your hips. Slowly extend one arm and the opposite leg while keeping your lower back gently against the floor. Return and switch sides.",
+      "form": [
+        "Move slowly; smaller movements are fine.",
+        "Breathe normally instead of holding your breath.",
+        "Keep your lower back from arching."
+      ],
+      "muscles": "Deep core and abdominal muscles",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=dead+bug+core+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=dead+bug+exercise+proper+form"
+    },
+    {
+      "id": "bodyweight_squat",
+      "name": "Bodyweight Squat",
+      "category": "Lower body",
+      "equipment": "None",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 75,
+      "how": "Stand about shoulder-width apart. Send your hips back and bend your knees as far as feels comfortable while keeping your heels down. Stand up smoothly.",
+      "form": [
+        "Keep knees tracking in the same direction as your toes.",
+        "Use a chair behind you as a depth target if helpful.",
+        "Do not force depth or work through pain."
+      ],
+      "muscles": "Quads, glutes and core",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=bodyweight+squat+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=bodyweight+squat+proper+form"
+    },
+    {
+      "id": "goblet_squat",
+      "name": "Goblet Squat",
+      "category": "Lower body",
+      "equipment": "Light dumbbell or kettlebell",
+      "sets": 2,
+      "reps": "8–10",
+      "rest_seconds": 90,
+      "how": "Hold a light dumbbell close to your chest. Stand comfortably, squat between your hips while keeping your chest relaxed and upright, then stand. Start with bodyweight if you are learning.",
+      "form": [
+        "Ask a coach to check your technique the first time.",
+        "Keep the weight close to your body.",
+        "Use a comfortable depth and controlled speed."
+      ],
+      "muscles": "Quads, glutes and core",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=goblet+squat+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=goblet+squat+proper+form"
+    },
+    {
+      "id": "leg_curl",
+      "name": "Seated Leg Curl",
+      "category": "Lower body",
+      "equipment": "Leg curl machine",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 90,
+      "how": "Adjust the machine so the pad sits comfortably above your heels and your knees line up with the pivot. Curl your heels down and back, then return slowly.",
+      "form": [
+        "Ask gym staff to adjust the machine for your height.",
+        "Do not jerk the weight.",
+        "Use a light, controlled setting."
+      ],
+      "muscles": "Hamstrings",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=seated+leg+curl+machine&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=seated+leg+curl+machine+proper+form"
+    },
+    {
+      "id": "glute_bridge",
+      "name": "Glute Bridge",
+      "category": "Lower body",
+      "equipment": "Mat",
+      "sets": 2,
+      "reps": "10–12",
+      "rest_seconds": 60,
+      "how": "Lie on your back with knees bent and feet flat. Tighten your glutes and lift your hips until your body forms a comfortable line from shoulders to knees. Lower slowly.",
+      "form": [
+        "Keep ribs relaxed; do not over-arch your back.",
+        "Push through your whole foot.",
+        "Pause briefly at the top."
+      ],
+      "muscles": "Glutes and hamstrings",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=glute+bridge+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=glute+bridge+proper+form"
+    },
+    {
+      "id": "plank",
+      "name": "Forearm Plank",
+      "category": "Core",
+      "equipment": "Mat",
+      "sets": 2,
+      "reps": "15–25 sec",
+      "rest_seconds": 45,
+      "how": "Place forearms on the floor with elbows under shoulders. Extend your legs and hold a straight, comfortable body position. Knees-down plank is a good easier version.",
+      "form": [
+        "Keep breathing throughout the hold.",
+        "Do not let your lower back sag.",
+        "End the set when you can no longer keep good form."
+      ],
+      "muscles": "Core, shoulders and glutes",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=forearm+plank+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=forearm+plank+proper+form"
+    },
+    {
+      "id": "machine_shoulder_press",
+      "name": "Machine Shoulder Press",
+      "category": "Upper body",
+      "equipment": "Shoulder press machine",
+      "sets": 2,
+      "reps": "8–10",
+      "rest_seconds": 90,
+      "how": "Set the seat so handles start around shoulder height. Press upward smoothly, stopping before your elbows lock, then lower slowly.",
+      "form": [
+        "Use a very light setting while learning.",
+        "Keep your back supported.",
+        "Stop if you feel pinching or sharp shoulder pain."
+      ],
+      "muscles": "Shoulders and triceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=machine+shoulder+press+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=machine+shoulder+press+proper+form"
+    },
+    {
+      "id": "chest_supported_row",
+      "name": "Chest-Supported Row",
+      "category": "Upper body",
+      "equipment": "Chest-supported row machine or incline bench",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 90,
+      "how": "Place your chest against the pad, let your arms extend, then pull the handles toward your sides. Lower slowly and keep your chest supported.",
+      "form": [
+        "Avoid shrugging your shoulders.",
+        "Keep the weight light enough to control.",
+        "Ask for help setting the machine."
+      ],
+      "muscles": "Upper back, lats and biceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=chest+supported+row+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=chest+supported+row+proper+form"
+    },
+    {
+      "id": "dumbbell_biceps_curl",
+      "name": "Dumbbell Biceps Curl",
+      "category": "Upper body",
+      "equipment": "Light dumbbells",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 60,
+      "how": "Stand tall with a light dumbbell in each hand. Keep elbows near your sides, curl the weights toward your shoulders, then lower slowly.",
+      "form": [
+        "Avoid swinging your torso.",
+        "Keep wrists straight.",
+        "Choose a weight that feels easy to control."
+      ],
+      "muscles": "Biceps and forearms",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=dumbbell+biceps+curl&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=dumbbell+biceps+curl+proper+form"
+    },
+    {
+      "id": "cable_triceps_pushdown",
+      "name": "Cable Triceps Pushdown",
+      "category": "Upper body",
+      "equipment": "Cable machine with rope or bar",
+      "sets": 2,
+      "reps": "8–12",
+      "rest_seconds": 60,
+      "how": "Stand close to the cable with elbows tucked by your sides. Push the handle down until your arms are comfortably straight, then return slowly.",
+      "form": [
+        "Keep elbows near your sides.",
+        "Do not lean your whole body over the cable.",
+        "Use a light weight and smooth movement."
+      ],
+      "muscles": "Triceps",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=cable+triceps+pushdown&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=triceps+pushdown+proper+form"
+    },
+    {
+      "id": "bird_dog",
+      "name": "Bird Dog",
+      "category": "Core",
+      "equipment": "Mat",
+      "sets": 2,
+      "reps": "6–8 each side",
+      "rest_seconds": 45,
+      "how": "Start on hands and knees. Extend one arm forward and the opposite leg back without twisting your hips. Pause, return and switch sides.",
+      "form": [
+        "Keep your back steady and move slowly.",
+        "Reach long rather than lifting high.",
+        "Make the movement smaller if balance is difficult."
+      ],
+      "muscles": "Core, glutes and back stabilisers",
+      "image_url": "",
+      "photo_search_url": "https://commons.wikimedia.org/w/index.php?search=bird+dog+exercise&title=Special:MediaSearch&type=image",
+      "demo_url": "https://www.youtube.com/results?search_query=bird+dog+exercise+proper+form"
+    }
+  ],
+  "habits": [
+    {
+      "id": "morning_water",
+      "title": "Drink some water",
+      "group": "Daily basics"
+    },
+    {
+      "id": "morning_skincare",
+      "title": "Gentle morning skincare",
+      "group": "Skincare"
+    },
+    {
+      "id": "meals",
+      "title": "Eat regular, balanced meals",
+      "group": "Daily basics"
+    },
+    {
+      "id": "movement",
+      "title": "Get some easy movement",
+      "group": "Daily basics"
+    },
+    {
+      "id": "evening_skincare",
+      "title": "Gentle evening skincare",
+      "group": "Skincare"
+    },
+    {
+      "id": "sleep",
+      "title": "Aim for 8–10 hours of sleep",
+      "group": "Recovery"
+    }
+  ],
+  "care": {
+    "skincare": [
+      "Morning: wash with a gentle, fragrance-free cleanser or just water if your skin feels dry.",
+      "Use a light, non-comedogenic moisturiser.",
+      "Use broad-spectrum SPF 30+ during the day.",
+      "Evening: gently cleanse, moisturise and avoid scrubbing or picking spots.",
+      "Introduce only one new acne product at a time. Ask a pharmacist, parent/guardian or healthcare professional if you are unsure; get help for painful acne or scarring."
+    ],
+    "haircare": [
+      "Use shampoo mainly on your scalp when it feels oily or dirty.",
+      "Use conditioner on the lengths and ends if your hair needs it.",
+      "Avoid very hot water and aggressive towel rubbing.",
+      "Hair type is individual; adjust washing frequency based on oiliness, activity and comfort."
+    ]
+  },
+  "safety": [
+    "This is a gentle starting template, not a test or a requirement to train every day.",
+    "Learn unfamiliar gym machines with a qualified gym instructor or trusted adult.",
+    "Start light, focus on technique and leave a few comfortable reps in reserve. Do not test one-rep maximums.",
+    "Stop if you feel sharp pain, dizziness or unusual symptoms, and tell a trusted adult.",
+    "Rest and regular meals matter. Do not use this plan for dieting or rapid body changes."
+  ]
+}
