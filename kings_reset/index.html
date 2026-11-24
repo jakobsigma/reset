@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090914">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="King's Reset">
+<link rel="manifest" href="manifest.json">
+<title>King's Reset</title>
+<style>
+:root{--bg:#090914;--panel:#121225;--panel2:#191932;--line:#29294a;--text:#f4f2ff;--muted:#aaa8c4;--purple:#9b7bff;--cyan:#67e8f9;--green:#62d6a5;--orange:#ffbd75;--red:#ff7c9a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#292052 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+button,input,select,textarea{font:inherit}button{cursor:pointer;color:inherit}.shell{max-width:980px;margin:auto;padding:22px 18px 100px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:11px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,#a78bfa,#5ee7f5);display:grid;place-items:center;color:#080817;font-weight:900;font-size:22px;box-shadow:0 0 28px #8b5cf655}.eyebrow{color:var(--muted);font-size:11px;letter-spacing:2px;font-weight:700}.brand h1{font-size:19px;line-height:1.1;margin:2px 0}.date{color:var(--muted);font-size:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:var(--muted);font-size:12px;background:#ffffff06}
+h2{font-size:22px;margin:0 0 4px}h3{font-size:16px;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 18px;font-size:13px}.hero{background:linear-gradient(120deg,#211b42,#14182c 65%,#10222c);border:1px solid #51427d;border-radius:22px;padding:20px;margin-bottom:17px;box-shadow:0 12px 45px #0005}.hero-row{display:flex;justify-content:space-between;align-items:center;gap:18px}.hero strong{font-size:30px}.hero p{color:#d2cdee;margin:4px 0 0;font-size:13px}.progress{height:9px;background:#ffffff17;border-radius:99px;overflow:hidden;margin-top:15px}.progress span{height:100%;display:block;background:linear-gradient(90deg,var(--purple),var(--cyan));border-radius:99px;transition:width .2s}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:linear-gradient(160deg,#17172d,#101020);border:1px solid var(--line);border-radius:18px;padding:16px;min-width:0}.card.wide{grid-column:1/-1}.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.muted{color:var(--muted)}.small{font-size:12px}.task{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-top:1px solid #ffffff0b}.task:first-of-type{border-top:0}.task input{appearance:none;width:21px;height:21px;flex:0 0 21px;border:1.5px solid #6c668d;border-radius:7px;margin:1px 0 0;background:#ffffff08}.task input:checked{background:var(--green);border-color:var(--green)}.task input:checked:after{content:"✓";display:block;color:#092018;text-align:center;font-weight:900;line-height:19px}.task.done .task-title{text-decoration:line-through;color:#8b89a6}.task-title{font-weight:650}.task-meta{font-size:12px;color:var(--muted);margin-top:2px}.tag{font-size:10px;padding:4px 7px;border-radius:7px;background:#8b5cf522;color:#c7b7ff;white-space:nowrap}.btn{border:1px solid var(--line);background:#ffffff08;padding:9px 12px;border-radius:11px;font-weight:650;font-size:13px}.btn.primary{background:linear-gradient(120deg,#8b5cf6,#6366f1);border:0;color:white}.btn:active{transform:scale(.98)}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.nav{position:fixed;bottom:0;left:0;right:0;z-index:5;background:#0b0b18ed;backdrop-filter:blur(18px);border-top:1px solid var(--line);display:flex;justify-content:center;padding:8px max(8px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}.nav button{border:0;background:none;color:#85839f;padding:7px 10px;min-width:60px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px}.nav button b{font-size:18px;font-weight:500}.nav button.active{color:#c5b4ff}.view{display:none}.view.active{display:block}.daystrip{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:13px 0}.day{border:1px solid var(--line);background:#ffffff05;border-radius:12px;padding:9px 2px;text-align:center;color:var(--muted);font-size:11px}.day strong{display:block;color:var(--text);font-size:15px;margin-top:3px}.day.selected{border-color:var(--purple);background:#8b5cf626}.day .dot{width:5px;height:5px;border-radius:50%;background:var(--cyan);display:block;margin:5px auto 0}.exercise{padding:12px 0;border-top:1px solid #ffffff10}.exercise:first-child{border-top:0}.exercise-top{display:flex;justify-content:space-between;gap:10px}.exercise p{margin:5px 0 0;color:var(--muted);font-size:12px}.sets{color:var(--cyan);font-weight:700;font-size:12px;white-space:nowrap}.field{display:grid;gap:6px;margin:10px 0}.field label{font-size:12px;color:var(--muted)}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#0c0c1b;color:var(--text);padding:11px;border-radius:11px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--purple)}.weeknav{display:flex;justify-content:space-between;align-items:center;gap:10px}.empty{padding:20px;text-align:center;color:var(--muted)}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#ffffff07;border:1px solid var(--line);border-radius:13px;padding:12px}.stat strong{display:block;font-size:21px}.stat span{color:var(--muted);font-size:11px}.notice{border-left:3px solid var(--cyan);padding:10px 12px;background:#67e8f90d;border-radius:0 10px 10px 0;color:#d4edf0;font-size:12px;margin:12px 0}.care-step{display:flex;gap:10px;padding:10px 0;border-top:1px solid #ffffff0d}.care-step:first-child{border-top:0}.care-step .num{width:25px;height:25px;border-radius:8px;background:#8b5cf522;color:#c6b4ff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 25px}.hidden{display:none!important}
+@media(min-width:700px){.shell{padding-top:30px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card.wide{grid-column:span 2}.nav{position:sticky;top:0;bottom:auto;border:1px solid var(--line);border-radius:15px;margin:0 auto 20px;max-width:550px}.nav button{flex:1}.shell{padding-bottom:35px}}
+@media(max-width:380px){.nav button{min-width:0;padding:7px 7px}.nav button span{font-size:9px}.shell{padding-left:13px;padding-right:13px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top">
+ <div class="brand"><div class="logo">K</div><div><div class="eyebrow">YOUR PERSONAL RESET</div><h1>KING'S RESET</h1><div class="date" id="todayLabel"></div></div></div>
+ <span class="pill">V1.0 · PERSONAL</span>
+</header>
+<nav class="nav" aria-label="Main navigation">
+ <button class="active" data-view="today"><b>⌂</b><span>Today</span></button>
+ <button data-view="calendar"><b>▦</b><span>Calendar</span></button>
+ <button data-view="training"><b>↗</b><span>Training</span></button>
+ <button data-view="care"><b>✧</b><span>Care</span></button>
+ <button data-view="progress"><b>◷</b><span>Progress</span></button>
+</nav>
+
+<section class="view active" id="view-today">
+ <div class="hero"><div class="hero-row"><div><div class="eyebrow">DAILY CHECK-IN</div><h2 id="greeting">Make today count.</h2><p id="heroDate">Small steps add up.</p></div><div style="text-align:right"><strong id="todayCount">0/0</strong><div class="small muted">tasks done</div></div></div><div class="progress"><span id="todayBar" style="width:0%"></span></div></div>
+ <div class="grid">
+  <div class="card wide"><div class="card-head"><h3>Today's plan</h3><span class="tag" id="todayFocus">Daily routine</span></div><div id="todayTasks"></div></div>
+  <div class="card"><h3>Daily basics</h3><div id="dailyTasks"></div></div>
+  <div class="card"><h3>Quick reminder</h3><p class="muted small">You do not need a perfect day. Complete what you can, recover when you need to, and pick it up again tomorrow.</p><div class="notice">Training should feel challenging but controlled. Stop if you feel pain, dizziness or unwell.</div></div>
+ </div>
+</section>
+
+<section class="view" id="view-calendar">
+ <h2>Weekly calendar</h2><p class="sub">Choose a day to see its plan. Your checkmarks are saved on this device.</p>
+ <div class="card">
+  <div class="weeknav"><button class="btn" id="prevWeek">← Previous</button><strong id="weekLabel"></strong><button class="btn" id="nextWeek">Next →</button></div>
+  <div class="daystrip" id="dayStrip"></div>
+  <div class="card-head"><div><h3 id="selectedDayTitle">Today's plan</h3><div class="small muted" id="selectedDaySubtitle"></div></div></div>
+  <div id="calendarTasks"></div>
+ </div>
+</section>
+
+<section class="view" id="view-training">
+ <h2>Training library</h2><p class="sub">Four planned sessions, with Saturday optional. Start light and focus on good technique.</p>
+ <div class="btnrow" id="workoutTabs"></div>
+ <div class="card" style="margin-top:12px"><div class="card-head"><div><h3 id="workoutTitle"></h3><div class="small muted" id="workoutSubtitle"></div></div><span class="tag">Beginner</span></div><div id="exerciseList"></div></div>
+ <div class="notice">Warm up for 5–8 minutes. Begin with 2 sets per exercise, leave a few good reps in reserve, and ask a qualified gym instructor to teach unfamiliar movements. No max lifts or training through pain.</div>
+</section>
+
+<section class="view" id="view-care">
+ <h2>Skin & hair care</h2><p class="sub">Keep it gentle and consistent. You can tick each step from your daily plan too.</p>
+ <div class="grid">
+  <div class="card"><div class="card-head"><h3>☀ Morning skincare</h3><span class="tag">Daily</span></div>
+   <div class="care-step"><span class="num">1</span><div><b>Gentle cleanser</b><div class="small muted">Wash without scrubbing. If skin feels dry, rinsing with water may be enough.</div></div></div>
+   <div class="care-step"><span class="num">2</span><div><b>Moisturiser</b><div class="small muted">Choose fragrance-free and non-comedogenic if possible.</div></div></div>
+   <div class="care-step"><span class="num">3</span><div><b>SPF 30–50</b><div class="small muted">Use broad-spectrum sunscreen in the morning.</div></div></div>
+  </div>
+  <div class="card"><div class="card-head"><h3>☾ Evening skincare</h3><span class="tag">Daily</span></div>
+   <div class="care-step"><span class="num">1</span><div><b>Gentle cleanse</b><div class="small muted">Especially after sweating or wearing sunscreen.</div></div></div>
+   <div class="care-step"><span class="num">2</span><div><b>Moisturise</b><div class="small muted">Apply while skin is slightly damp.</div></div></div>
+   <div class="care-step"><span class="num">3</span><div><b>Hands off spots</b><div class="small muted">Avoid picking, squeezing and harsh scrubs.</div></div></div>
+  </div>
+  <div class="card wide"><h3>Hair routine</h3>
+   <div class="care-step"><span class="num">1</span><div><b>Shampoo your scalp as needed</b><div class="small muted">Frequency depends on oiliness, sweat and hair texture; it does not have to be a fixed number of days.</div></div></div>
+   <div class="care-step"><span class="num">2</span><div><b>Condition the lengths</b><div class="small muted">Use conditioner after shampoo, especially if hair feels dry or tangles.</div></div></div>
+   <div class="care-step"><span class="num">3</span><div><b>Style gently</b><div class="small muted">Avoid excessive heat and pulling. Try a small amount of styling product.</div></div></div>
+   <div class="field"><label for="hairNotes">Hair notes / products to try</label><textarea id="hairNotes" rows="2" placeholder="Add what works for your hair..."></textarea></div>
+   <button class="btn primary" id="saveHair">Save hair notes</button>
+  </div>
+  <div class="card wide"><h3>Skin notes</h3><p class="small muted">Track irritation, dryness or changes without judging your appearance.</p>
+   <div class="field"><label for="skinNotes">How is your skin doing?</label><textarea id="skinNotes" rows="2" placeholder="For example: a little dry around my nose..."></textarea></div>
+   <button class="btn primary" id="saveSkin">Save skin notes</button>
+  </div>
+ </div>
+ <div class="notice">For persistent, painful or scarring acne, ask a parent or guardian to help you speak with a pharmacist or healthcare professional. Introduce products slowly and avoid strong actives without appropriate advice.</div>
+</section>
+
+<section class="view" id="view-progress">
+ <h2>Your progress</h2><p class="sub">Measure consistency and skills, not your worth or appearance.</p>
+ <div class="grid">
+  <div class="card wide"><h3>This week</h3><div class="statrow"><div class="stat"><strong id="weekDone">0</strong><span>Tasks completed</span></div><div class="stat"><strong id="weekRate">0%</strong><span>Completion</span></div><div class="stat"><strong id="activeDays">0</strong><span>Active days</span></div></div><div id="weekBars" style="display:flex;align-items:end;gap:8px;height:105px;margin-top:18px"></div></div>
+  <div class="card"><h3>Strength log</h3><p class="small muted">Record a comfortable set or exercise milestone. No need to test your maximum.</p>
+   <div class="field"><label for="logExercise">Exercise</label><input id="logExercise" placeholder="e.g. incline push-ups"></div>
+   <div class="field"><label for="logResult">What did you do?</label><input id="logResult" placeholder="e.g. 2 sets of 8"></div>
+   <button class="btn primary" id="addLog">Save entry</button><div id="strengthEntries" style="margin-top:12px"></div>
+  </div>
+  <div class="card"><h3>Weekly reflection</h3>
+   <div class="field"><label for="reflection">What went well? What would you adjust?</label><textarea id="reflection" rows="4" placeholder="A small win this week was..."></textarea></div>
+   <button class="btn primary" id="saveReflection">Save reflection</button>
+  </div>
+ </div>
+ <div class="btnrow" style="margin-top:14px"><button class="btn" id="exportData">Export my data</button><button class="btn" id="resetData">Reset all app data</button></div>
+ <p class="small muted">Your information is stored locally in this browser. Export a backup before clearing browser data or switching devices.</p>
+</section>
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const KEY='kings-reset-v1';
+const workouts=[
+ {day:1,name:'Monday · Upper body A',sub:'Gym preferred · Push and pull',items:[['Chest press machine','2 × 10–12','Use a light setting; keep shoulders comfortable.'],['Lat pulldown','2 × 10–12','Pull toward upper chest without swinging.'],['Seated cable row','2 × 10–12','Keep torso steady and move smoothly.'],['Shoulder press machine','2 × 8–10','Use light resistance and a comfortable range.'],['Plank','2 × 20–30 sec','Keep a straight, comfortable body line.']]},
+ {day:3,name:'Wednesday · Lower body + core',sub:'Home or gym · Legs and stability',items:[['Bodyweight squat','2 × 10–12','Use a comfortable depth; knees follow toes.'],['Reverse lunge','2 × 8 each leg','Hold a wall for balance if needed.'],['Glute bridge','2 × 12','Pause briefly at the top.'],['Calf raise','2 × 12–15','Move slowly; use a wall for balance.'],['Dead bug','2 × 8 each side','Keep your lower back controlled.'],['Side plank','2 × 15–20 sec each side','Modify with knees down if needed.']]},
+ {day:5,name:'Friday · Upper body B',sub:'Home or gym · Calisthenics basics',items:[['Incline push-up','2 × 8–12','Use a sturdy counter or bench; keep body straight.'],['Knee or standard push-up','2 × 5–10','Choose a version you can control.'],['Assisted pull-up or cable row','2 × 8–10','Use assistance; no swinging or kipping.'],['Prone Y-T raise','2 × 8 each shape','Lie face down and lift arms gently.'],['Dead bug','2 × 8 each side','Move slowly and breathe.']]},
+ {day:6,name:'Saturday · Optional full body',sub:'Only if rested · Light gym or home session',items:[['Goblet squat or bodyweight squat','2 × 10','Keep the load light if using a dumbbell.'],['Light Romanian deadlift or hip hinge','2 × 10','Learn the movement with an instructor first.'],['Step-up','2 × 8 each leg','Use a low, stable step.'],['Glute bridge','2 × 12','Controlled movement.'],['Bird dog','2 × 8 each side','Keep hips steady.']]}
+];
+const dayNames=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{checks:{},logs:[],notes:{}}}catch(e){return {checks:{},logs:[],notes:{}}}}
+let data=load(),selected=new Date(),weekOffset=0,workoutIndex=0;
+function save(){localStorage.setItem(KEY,JSON.stringify(data))}
+function keyDate(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function dateAt(d,delta){let x=new Date(d);x.setDate(x.getDate()+delta);return x}
+function monday(d){let x=new Date(d);x.setHours(12,0,0,0);x.setDate(x.getDate()-(x.getDay()+6)%7);return x}
+function dailyItems(d){
+ const day=d.getDay(),w=workouts.find(x=>x.day===day);
+ let items=[];
+ if(w) items.push({id:'workout-'+day,title:w.name.replace(/^.*· /,''),meta:day===6?'Optional session — skip if tired':'After school · 35–50 min',type:'Training'});
+ else if(day===2||day===4) items.push({id:'recovery',title:'Recovery and mobility',meta:'Easy walk and gentle stretching',type:'Recovery'});
+ else if(day===0) items.push({id:'review',title:'Weekly review and prepare',meta:'Reflect, plan and get ready for Monday',type:'Reset'});
+ else items.push({id:'rest',title:'Rest and free time',meta:'No structured workout needed',type:'Recovery'});
+ items.push({id:'skin-am',title:'Morning skincare',meta:'Gentle cleanse (or rinse), moisturiser, SPF',type:'Care'});
+ items.push({id:'skin-pm',title:'Evening skincare',meta:'Gentle cleanse and moisturiser',type:'Care'});
+ items.push({id:'hair',title:'Basic hair care',meta:'Style gently; shampoo/condition when needed',type:'Care'});
+ items.push({id:'food',title:'Regular meals and water',meta:'Eat enough; include varied foods and protein',type:'Daily'});
+ items.push({id:'sleep',title:'Wind down for 8–10 hours of sleep',meta:'Put devices away and get ready for bed',type:'Daily'});
+ return items;
+}
+function checked(date,id){return !!data.checks[date+'|'+id]}
+function toggle(date,id,val){let k=date+'|'+id;if(val)data.checks[k]=true;else delete data.checks[k];save();renderAll()}
+function taskHTML(d,item){let k=keyDate(d),done=checked(k,item.id);return `<label class="task ${done?'done':''}"><input type="checkbox" data-date="${k}" data-id="${item.id}" ${done?'checked':''}><span style="flex:1"><span class="task-title">${item.title}</span><div class="task-meta">${item.meta}</div></span><span class="tag">${item.type}</span></label>`}
+function bindTasks(root){root.querySelectorAll('input[type=checkbox][data-id]').forEach(el=>el.addEventListener('change',()=>toggle(el.dataset.date,el.dataset.id,el.checked)))}
+function renderToday(){let d=new Date(),k=keyDate(d),items=dailyItems(d),done=items.filter(x=>checked(k,x.id)).length;$('#todayLabel').textContent=d.toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long'});$('#heroDate').textContent=d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});$('#todayCount').textContent=done+'/'+items.length;$('#todayBar').style.width=(done/items.length*100)+'%';$('#todayTasks').innerHTML=items.map(x=>taskHTML(d,x)).join('');$('#dailyTasks').innerHTML=items.filter(x=>['skin-am','skin-pm','hair','food','sleep'].includes(x.id)).map(x=>taskHTML(d,x)).join('');let w=workouts.find(x=>x.day===d.getDay());$('#todayFocus').textContent=w?'Training day':d.getDay()===0?'Reset day':'Recovery';bindTasks($('#todayTasks'));bindTasks($('#dailyTasks'))}
+function renderCalendar(){let start=monday(new Date());start.setDate(start.getDate()+weekOffset*7);let end=dateAt(start,6);$('#weekLabel').textContent=start.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' – '+end.toLocaleDateString(undefined,{month:'short',day:'numeric'});let selectedDate=selected;$('#dayStrip').innerHTML=Array.from({length:7},(_,i)=>{let d=dateAt(start,i),k=keyDate(d),items=dailyItems(d),done=items.filter(x=>checked(k,x.id)).length;return `<button class="day ${keyDate(d)===keyDate(selectedDate)?'selected':''}" data-day="${k}">${d.toLocaleDateString(undefined,{weekday:'short'}).toUpperCase()}<strong>${d.getDate()}</strong><span class="dot" style="opacity:${done?'1':'.15'}"></span></button>`}).join('');$$('#dayStrip .day').forEach(b=>b.onclick=()=>{selected=new Date(b.dataset.day+'T12:00:00');renderCalendar()});let items=dailyItems(selected);$('#selectedDayTitle').textContent=selected.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});$('#selectedDaySubtitle').textContent=items.filter(x=>checked(keyDate(selected),x.id)).length+' of '+items.length+' tasks completed';$('#calendarTasks').innerHTML=items.map(x=>taskHTML(selected,x)).join('');bindTasks($('#calendarTasks'))}
+function renderWorkout(){let w=workouts[workoutIndex];$('#workoutTitle').textContent=w.name;$('#workoutSubtitle').textContent=w.sub;$('#workoutTabs').innerHTML=workouts.map((x,i)=>`<button class="btn ${i===workoutIndex?'primary':''}" data-w="${i}">${['Mon','Wed','Fri','Sat'][i]}</button>`).join('');$$('#workoutTabs button').forEach(b=>b.onclick=()=>{workoutIndex=+b.dataset.w;renderWorkout()});$('#exerciseList').innerHTML=w.items.map(x=>`<div class="exercise"><div class="exercise-top"><b>${x[0]}</b><span class="sets">${x[1]}</span></div><p>${x[2]}</p></div>`).join('')}
+function renderProgress(){let start=monday(new Date()),days=Array.from({length:7},(_,i)=>dateAt(start,i)),total=0,done=0,active=0;let bars=days.map(d=>{let its=dailyItems(d),n=its.filter(x=>checked(keyDate(d),x.id)).length;total+=its.length;done+=n;if(n)active++;return {d,n,t:its.length}});$('#weekDone').textContent=done;$('#weekRate').textContent=Math.round(done/total*100)+'%';$('#activeDays').textContent=active;$('#weekBars').innerHTML=bars.map(x=>`<div style="flex:1;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:end;gap:5px"><div style="font-size:10px;color:var(--muted)">${x.n}/${x.t}</div><div style="height:${Math.max(5,x.n/x.t*68)}px;background:linear-gradient(180deg,var(--cyan),var(--purple));border-radius:6px 6px 2px 2px"></div><div class="small muted">${x.d.toLocaleDateString(undefined,{weekday:'short'}).slice(0,2)}</div></div>`).join('');$('#strengthEntries').innerHTML=data.logs.slice(0,8).map(x=>`<div class="task"><span style="flex:1"><b>${escapeHTML(x.exercise)}</b><div class="task-meta">${escapeHTML(x.result)} · ${x.date}</div></span></div>`).join('')||'<p class="small muted">No entries yet.</p>'}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderNotes(){$('#hairNotes').value=data.notes.hair||'';$('#skinNotes').value=data.notes.skin||'';$('#reflection').value=data.notes.reflection||''}
+function renderAll(){renderToday();renderCalendar();renderWorkout();renderProgress();renderNotes()}
+$$('.nav button').forEach(b=>b.onclick=()=>{ $$('.nav button').forEach(x=>x.classList.toggle('active',x===b));$$('.view').forEach(x=>x.classList.toggle('active',x.id==='view-'+b.dataset.view));window.scrollTo({top:0,behavior:'smooth'});if(b.dataset.view==='progress')renderProgress()});
+$('#prevWeek').onclick=()=>{weekOffset--;selected=dateAt(selected,-7);renderCalendar()};
+$('#nextWeek').onclick=()=>{weekOffset++;selected=dateAt(selected,7);renderCalendar()};
+$('#saveHair').onclick=()=>{data.notes.hair=$('#hairNotes').value;save();toast('Hair notes saved')};
+$('#saveSkin').onclick=()=>{data.notes.skin=$('#skinNotes').value;save();toast('Skin notes saved')};
+$('#saveReflection').onclick=()=>{data.notes.reflection=$('#reflection').value;save();toast('Reflection saved')};
+$('#addLog').onclick=()=>{let exercise=$('#logExercise').value.trim(),result=$('#logResult').value.trim();if(!exercise||!result){toast('Add an exercise and what you did first');return}data.logs.unshift({exercise,result,date:new Date().toLocaleDateString()});save();$('#logExercise').value='';$('#logResult').value='';renderProgress();toast('Progress entry saved')};
+$('#exportData').onclick=()=>{let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='kings-reset-backup.json';a.click();URL.revokeObjectURL(a.href)};
+$('#resetData').onclick=()=>{if(confirm('Delete all King's Reset checkmarks, notes and logs from this browser? This cannot be undone.')){data={checks:{},logs:[],notes:{}};save();renderAll();toast('App data reset')}};
+function toast(msg){let t=document.createElement('div');t.textContent=msg;t.style='position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#272344;border:1px solid #6555a0;padding:10px 16px;border-radius:12px;z-index:10;box-shadow:0 8px 30px #0008';document.body.append(t);setTimeout(()=>t.remove(),2100)}
+renderAll();
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body>
+</html>
